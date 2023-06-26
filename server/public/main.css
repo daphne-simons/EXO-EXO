@@ -66,10 +66,9 @@ body{
 }
 
 .earth .description {
-  font-size: 1.9rem;
+  font-size: 2rem;
   color: rgb(122, 203, 0);
 }
-
 
 .kepler {
   width: 100%;
