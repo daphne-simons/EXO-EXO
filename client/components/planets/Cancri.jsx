@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import CancriMap from '../../../server/public/textures/2k_sun.jpeg'
 import { useFrame, useLoader } from '@react-three/fiber'
-import { Sparkles, MeshRefractionMaterial, Html } from '@react-three/drei'
+import { Sparkles, Html } from '@react-three/drei'
 import Typing from '../Typing'
 
 export default function Cancri({ position, args }) {

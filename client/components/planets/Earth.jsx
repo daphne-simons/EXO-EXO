@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Html } from '@react-three/drei'
-// import Info from '../Info'
-
+// import exoplanetsdata from '../../exoplanetsdata.json'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import EarthMap from '../../../server/public/textures/EarthHD.webp'
 import { useFrame, useLoader } from '@react-three/fiber'
@@ -62,11 +61,6 @@ export default function Earth({ position, args }) {
       {displayCard()}
       <sphereGeometry args={args} />
       <meshStandardMaterial map={colorMap} />
-      {/* <Html distanceFactor={10}> */}
-      {/* <div className="content">
-          <Info />
-        </div> */}
-      {/* </Html> */}
     </mesh>
   )
 }

@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react'
-
 import { Canvas } from '@react-three/fiber'
 import {
   Bounds,
@@ -11,20 +10,20 @@ import {
 } from '@react-three/drei'
 import Hud from './HUD/Hud'
 import { Physics } from '@react-three/cannon'
-import Earth from './planets/Earth'
+
+// import Earth from './planets/Earth'
 import HD80606b from './planets/HD80606b'
 import HD189733b from './planets/HD189733b'
 import Kepler22B from './planets/Kepler22b'
 import Upsilon from './planets/Upsilon'
 import Cancri from './planets/Cancri'
-import Music from './Sound'
-import Typing from './Typing'
+import TestEarth from './planets/TestEarth'
 
 function MainView() {
   return (
     <>
       <Hud />
-      {/* <Music /> */}
+
       <Canvas camera={{ position: [0, -10, 80], fov: 50 }} dpr={[1, 2]}>
         <spotLight position={[10, 10, 10]} angle={0.3} />
         <OrbitControls
@@ -37,9 +36,7 @@ function MainView() {
           autoRotateSpeed={0.3}
         />
         <Stars count={10000} fade={true} depth={0.2} speed={0.5} factor={6} />
-        {/* <ambientLight intensity={10} /> */}
         <Suspense fallback={<Loader />}>
-          {/* <Orbit position={[0, 0, -500]} /> */}
           <Bounds fit clip observe margin={1.2}>
             <SelectToZoom>
               <Physics>
@@ -48,7 +45,7 @@ function MainView() {
                   args={[1.875, 32, 32]}
                   rotation={[4, 0, -0]}
                 />
-                <Earth
+                <TestEarth
                   position={[0, 0, 0]}
                   rotation={[1, 1, -2]}
                   occlude={[false]}
