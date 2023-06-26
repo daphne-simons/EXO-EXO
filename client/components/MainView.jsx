@@ -24,7 +24,7 @@ function MainView() {
   return (
     <>
       <Hud />
-      <Music />
+      {/* <Music /> */}
       <Canvas camera={{ position: [0, -10, 80], fov: 50 }} dpr={[1, 2]}>
         <spotLight position={[10, 10, 10]} angle={0.3} />
         <OrbitControls
