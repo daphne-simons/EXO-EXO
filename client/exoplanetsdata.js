@@ -3,11 +3,11 @@ const planets = [
     id: 1,
     name: 'Earth',
     description:
-      "Earth is the third planet from the Sun and the only astronomical object known to harbor life. About 71% of Earth's surface is made up of the ocean, dwarfing Earth's polar ice, lakes, and rivers.",
+      'Home planet. Contains liquid water. Earth is currently the only astronomical object known to harbor diverse life forms..',
     distanceFromEarth: '0 light-years.',
     habitable: 'Yes.',
     atmosphere: 'Nitrogen, Oxygen, Argon, Carbon Dioxide, Water Vapour.',
-    temperature: '−89.2 - 56.7 °C',
+    temperature: 'lowest: −89.2 highest: 56.7 °C',
     radius: '6371 km',
   },
   {

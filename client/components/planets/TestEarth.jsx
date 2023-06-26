@@ -63,7 +63,7 @@ export default function TestEarth({ position, args }) {
       {/* {displayCard()} */}
       {active && (
         <Html distanceFactor={5} position={[0, 1.8, 0]}>
-          <DisplayCard planetId={1} />
+          <DisplayCard planetId={1} name={'earth'} />
         </Html>
       )}
       <sphereGeometry args={args} />

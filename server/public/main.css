@@ -28,23 +28,20 @@ body{
   text-align: center;
 }
 
-
-
-/* Info card styling  */
+/* DISPLAY CARD STYLING  */
 
 .card {
-  /* z-index: 10; */
-  /* display: flex; */
-  /* grid-template-columns: 800px;
-  grid-template-rows: 300px 250px 250px;
-  grid-template-areas: 'image' 'text'; */
   background: rgba(0, 0, 0, 0.1);
   box-shadow: 15px 15px 15px rgba(82, 198, 61, 0.9);
   font-family: 'VT323', monospace; 
-  /* text-align: center; */
   color: rgba(82, 198, 61, 0.9);
   font-size: auto;
   font-weight: 200;
+  text-align: right;
+}
+
+.flexText {
+  flex-direction: column;
 }
 
 .planet-title{
@@ -56,10 +53,23 @@ body{
   font-size: 5.5rem;
 }
 
-.flexText {
-  flex-direction: column;
-  font-size: 20rem;
+/* EARTH */
+.earth {
+  width: 370px;
+  padding: 30px 80px 30px 210px;
 }
+
+.earth .title {
+  font-size: 3.2rem;
+  font-weight: 200;
+  color: rgb(122, 203, 0);
+}
+
+.earth .description {
+  font-size: 1.9rem;
+  color: rgb(122, 203, 0);
+}
+
 
 .kepler {
   width: 100%;
@@ -148,23 +158,6 @@ body{
 
 }
 
-.earth {
-  width: 300px;
-  padding: 30px 100px 30px 200px;
-  text-align: right;
-  /* background: rgba(150, 150, 150, 0.5); */
-}
-
-.earth-title{
-  font-size: 3.3rem;
-  font-weight: 200;
-  color: rgb(122, 203, 0);
-}
-
-.earth-description {
-  font-size: 2rem;
-  color: rgb(122, 203, 0);
-}
 
 .home-title {
   margin: 0;

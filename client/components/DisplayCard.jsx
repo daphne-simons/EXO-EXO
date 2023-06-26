@@ -4,31 +4,45 @@ import React from 'react'
 import Typing from './Typing'
 import planets from '../exoplanetsdata'
 
-export default function DisplayCard({ planetId }) {
+export default function DisplayCard({ planetId }, { name }) {
   console.log('id', planetId)
   let chosenPlanet = planets.find((planet) => planet.id === planetId)
 
+  // Class names & Type speed:
+  const title = `${name} title`
+  const description = `${name} description`
+
+  const speed = {
+    slow: 200,
+    med: 150,
+    fast: 100,
+    extraFast: 50,
+    superFast: 30,
+  }
   return (
     <div className="card earth">
       <div className="flexText">
-        <h2 className="earth-title">
-          <Typing line={`Name: ${chosenPlanet.name}`} typeSpeed={50} />
+        <h2 className={title}>
+          <Typing
+            line={`Name: ${chosenPlanet.name}`}
+            typeSpeed={speed.extraFast}
+          />
         </h2>
-        <p className="earth-description">
+        <p className={description}>
           <Typing
             line={`Description: ${chosenPlanet.description}`}
-            typeSpeed={100}
+            typeSpeed={speed.extraFast}
           />
-          <p className="earth-description">
+          <p className={description}>
             <Typing
               line={`Distance from Earth: ${chosenPlanet.distanceFromEarth}`}
-              typeSpeed={150}
+              typeSpeed={speed.fast}
             />
           </p>
-          <p className="earth-description">
+          <p className={description}>
             <Typing
               line={`Temperature: ${chosenPlanet.temperature}`}
-              typeSpeed={220}
+              typeSpeed={speed.fast}
             />
           </p>
         </p>
